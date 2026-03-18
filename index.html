@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiderman Coloring Workshop | Draw & Paint</title>
+    <meta name="description" content="A fun and interactive Spiderman coloring website for kids. Choose from 12 vibrant crayons and color your favorite superhero!">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span class="spider-icon">🕸️</span>
+            <h1>Spiderman Coloring Page</h1>
+        </div>
+        <div class="level-selection">
+            <button class="level-btn active" data-level="spiderman">Spiderman</button>
+            <button class="level-btn" data-level="captain">Captain America</button>
+            <button class="level-btn" data-level="hulk">Hulk</button>
+            <button class="level-btn" data-level="thor">Thor</button>
+            <button class="level-btn" data-level="iron">Iron Man</button>
+        </div>
+        <div class="controls">
+            <button id="clearBtn" class="control-btn">Clear All</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="canvas-container">
+            <canvas id="drawingCanvas"></canvas>
+            <div id="spidermanOutline" class="outline-overlay visible" style="background-image: url('spider.jpg');">
+                <!-- Spiderman Face Image Overlay -->
+            </div>
+            
+            <div id="captainOutline" class="outline-overlay hidden" style="background-image: url('america.jpg');">
+                <!-- Captain America Image Overlay -->
+            </div>
+
+            <div id="hulkOutline" class="outline-overlay hidden" style="background-image: url('hulk.png');">
+                <!-- Hulk Image Overlay -->
+            </div>
+
+            <div id="thorOutline" class="outline-overlay hidden" style="background-image: url('thor.png');">
+                <!-- Thor Image Overlay -->
+            </div>
+
+            <div id="ironOutline" class="outline-overlay hidden" style="background-image: url('iron.png');">
+                <!-- Iron Man Image Overlay -->
+            </div>
+        </div>
+
+        <aside class="palette">
+            <h2>Pick Your Crayon</h2>
+            <div class="crayons-grid" id="crayonsGrid">
+                <!-- 12 Crayons will be injected by JS -->
+            </div>
+            <div class="brush-settings">
+                <span>Brush Size:</span>
+                <input type="range" id="brushSize" min="5" max="50" value="15">
+            </div>
+        </aside>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
